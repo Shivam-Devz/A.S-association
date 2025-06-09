@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart page</title>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="A.S-logo.png" alt="" />
+        <h2>
+          A.S Association <br />
+          <p class="desc">IT Services and IT Consulting</p>
+        </h2>
+        <div class="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About us</a></li>
+            <li><a href="Login.html">Sign In</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="cart-section">
+        <!-- cart items will be rendered here-->
+      </section>
+      <button id="WhatsApp-btn" onclick="redirectToWhatsApp()">
+        Proceed Order
+      </button>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h4>About A.S Association</h4>
+          <p>
+            A.S Association is dedicated to helping people stay safe online. We
+            provide free assistance in combating cybercrime, protecting privacy,
+            and restoring digital peace of mind.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: asassociaton@gmail.com</p>
+          <p>Phone: +91 8637043421 / 9547668189 / 9123249116</p>
+          <p>
+            Address: Mahabir Road, Baridih Colony, Jamshedpur, Jharkhand 831017
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2021 A.S Association. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+      function redirectToWhatsApp() {
+        const message = encodeURIComponent(
+          "Hello, I want to proceed with my order."
+        );
+        const phoneNumber = "919547668189";
+        const url = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>

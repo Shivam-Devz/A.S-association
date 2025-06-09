@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service page</title>
+    <link rel="stylesheet" href="service.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="A.S-logo.png" alt="logo" />
+        <h2>
+          A.S Association <br />
+          <p class="desc">IT Services and IT Consulting</p>
+        </h2>
+
+        <div class="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About us</a></li>
+            <li><a href="Login.html">Sign In</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="Service-section">
+        <h3>Services</h3>
+        <ul>
+          <li onclick="showDescription('software', this)">
+            Software Development <span class="plus-sign">+</span>
+          </li>
+          <li onclick="showDescription('consulting', this)">
+            IT Consulting <span class="plus-sign">+</span>
+          </li>
+          <li onclick="showDescription('cloud', this)">
+            Cloud Solutions <span class="plus-sign">+</span>
+          </li>
+          <li onclick="showDescription('cyber', this)">
+            Cybersecurity <span class="plus-sign">+</span>
+          </li>
+          <li onclick="showDescription('hacking', this)">
+            Ethical Hacking <span class="plus-sign">+</span>
+          </li>
+          <li onclick="showDescription('analytics', this)">
+            Data Analytics <span class="plus-sign">+</span>
+          </li>
+          <li onclick="showDescription('support', this)">
+            IT Support and Maintenance <span class="plus-sign">+</span>
+          </li>
+          <li onclick="showDescription('socialmedia', this)">
+            Social Media Production Services <span class="plus-sign">+</span>
+          </li>
+          <li onclick="showDescription('phonesecurity', this)">
+            Phone Security Services <span class="plus-sign">+</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="description-section" style="display: none">
+        <h3 id="desc-title"></h3>
+        <p id="desc-content"></p>
+        <button id="add-to-cart-btn" style="display: none">Add to Cart</button>
+        <a href="cart.html" id="go-to-cart">Go to Cart</a>
+      </section>
+
+      <template id="service-software">
+        <h2>Software Development</h2>
+        <div>
+          <h2>Software Development Services</h2>
+          <ul>
+            <li>
+              <strong>Custom Software Development</strong>
+              <ul>
+                <li>Tailored solutions to meet specific business needs</li>
+                <li>Scalable and robust architecture</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Web Application Development</strong>
+              <ul>
+                <li>Responsive, cross-browser compatible apps</li>
+                <li>Frontend & backend development using modern frameworks</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Mobile App Development</strong>
+              <ul>
+                <li>Native and cross-platform mobile apps (iOS, Android)</li>
+                <li>Optimized for performance and user experience</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Enterprise Software Solutions</strong>
+              <ul>
+                <li>Business process automation</li>
+                <li>Scalable systems for large organizations</li>
+              </ul>
+            </li>
+            <li>
+              <strong>UI/UX Design</strong>
+              <ul>
+                <li>User-centric design approach</li>
+                <li>Wireframing, prototyping, and user testing</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Legacy System Modernization</strong>
+              <ul>
+                <li>Re-engineering old systems with modern technology</li>
+                <li>Data migration and integration</li>
+              </ul>
+            </li>
+            <li>
+              <strong>API Development & Integration</strong>
+              <ul>
+                <li>Secure and scalable API solutions</li>
+                <li>Seamless third-party integrations</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Cloud-Based Development</strong>
+              <ul>
+                <li>Cloud-native app development (AWS, Azure, Google Cloud)</li>
+                <li>Infrastructure setup and management</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Agile Development & Prototyping</strong>
+              <ul>
+                <li>Iterative development cycles</li>
+                <li>Continuous integration and delivery (CI/CD)</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Quality Assurance & Testing</strong>
+              <ul>
+                <li>Manual and automated testing</li>
+                <li>Performance, security, and usability testing</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="service-consulting">
+        <h2>IT Consulting</h2>
+        <div>
+          <h2>IT Consulting Services</h2>
+          <ul>
+            <li>
+              <strong>IT Infrastructure Assessment</strong>
+              <ul>
+                <li>Evaluate existing hardware, software, and network setup</li>
+                <li>Identify performance bottlenecks and inefficiencies</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Technology Strategy & Roadmapping</strong>
+              <ul>
+                <li>Align IT with long-term business goals</li>
+                <li>Develop a clear digital transformation plan</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Systems Integration & Optimization</strong>
+              <ul>
+                <li>Improve interoperability between systems</li>
+                <li>Streamline workflows and enhance productivity</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Cloud Consulting</strong>
+              <ul>
+                <li>Migration planning (to AWS, Azure, Google Cloud)</li>
+                <li>Cloud architecture and cost optimization</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Cybersecurity Consulting</strong>
+              <ul>
+                <li>Risk assessment and vulnerability analysis</li>
+                <li>
+                  Recommendations for security policies, tools, and compliance
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Business Continuity & Disaster Recovery Planning</strong>
+              <ul>
+                <li>Develop reliable backup and recovery strategies</li>
+                <li>Minimize downtime and data loss</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Digital Transformation Guidance</strong>
+              <ul>
+                <li>Modernize legacy systems and processes</li>
+                <li>Leverage AI, automation, and data analytics</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Software Selection & Implementation Consulting</strong>
+              <ul>
+                <li>Evaluate and recommend suitable enterprise software</li>
+                <li>Support implementation, customization, and training</li>
+              </ul>
+            </li>
+            <li>
+              <strong>IT Governance & Compliance</strong>
+              <ul>
+                <li>
+                  Establish best practices, standards, and regulatory compliance
+                </li>
+                <li>Support for GDPR, HIPAA, ISO, etc.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Ongoing Advisory & Support</strong>
+              <ul>
+                <li>Continuous improvement recommendations</li>
+                <li>Expert support for evolving business needs</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="service-cloud">
+        <h2>Cloud Solutions</h2>
+        <div>
+          <h2>Cloud Solution Services</h2>
+          <ul>
+            <li>
+              <strong>Cloud Migration Services</strong>
+              <ul>
+                <li>Seamless transition to cloud-based infrastructure</li>
+                <li>Assessment and planning for minimal downtime</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Cloud Deployment & Integration</strong>
+              <ul>
+                <li>Setup and configuration of cloud environments</li>
+                <li>Integration with existing on-premises systems</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Cloud Management & Optimization</strong>
+              <ul>
+                <li>Ongoing monitoring and performance tuning</li>
+                <li>Cost management and resource optimization</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Multi-Cloud & Hybrid Cloud Solutions</strong>
+              <ul>
+                <li>Strategies involving AWS, Microsoft Azure, Google Cloud</li>
+                <li>Hybrid cloud architecture design and management</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Cloud-Native Application Development</strong>
+              <ul>
+                <li>Building scalable and resilient cloud applications</li>
+                <li>Leveraging containerization and microservices</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Automation & DevOps Enablement</strong>
+              <ul>
+                <li>Infrastructure as Code (IaC) implementation</li>
+                <li>CI/CD pipeline setup for faster deployments</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Security & Compliance</strong>
+              <ul>
+                <li>Data protection and encryption</li>
+                <li>Compliance with industry standards and regulations</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Infrastructure as a Service (IaaS)</strong>
+              <ul>
+                <li>Provisioning of virtualized computing resources</li>
+                <li>Flexible and scalable infrastructure management</li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                >Platform as a Service (PaaS) & Software as a Service
+                (SaaS)</strong
+              >
+              <ul>
+                <li>
+                  Customizing platform and software offerings to business needs
+                </li>
+                <li>Support for rapid development and deployment</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="service-cyber">
+        <h2>Cybersecurity</h2>
+        <div>
+          <h2>Cybersecurity Services Catalogue</h2>
+          <ul>
+            <li>
+              <strong
+                >Vulnerability Assessment & Penetration Testing (VAPT)</strong
+              >
+              <ul>
+                <li>Web, Mobile, Network, API, and Cloud Testing</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Digital Forensics & Incident Response (DFIR)</strong>
+              <ul>
+                <li>Cyberattack & Data Breach Investigation</li>
+                <li>Malware & Ransomware Analysis</li>
+                <li>Email Forensics</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Threat Intelligence & Dark Web Monitoring</strong>
+              <ul>
+                <li>Dark Web Scanning</li>
+                <li>Threat Actor Tracking & Alerts</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Security Compliance & Audit</strong>
+              <ul>
+                <li>ISO 27001, GDPR, HIPAA, PCI-DSS</li>
+                <li>SOC 2 Readiness & CMMC</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Cybersecurity Consulting & Strategy</strong>
+              <ul>
+                <li>Security Roadmaps & Risk Management</li>
+                <li>DevSecOps & Disaster Recovery</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Managed Security Services (MSSP)</strong>
+              <ul>
+                <li>24/7 SOC, SIEM, IDPS, EDR</li>
+                <li>Firewall & WAF Management</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Data Protection & Privacy</strong>
+              <ul>
+                <li>DLP, Encryption, Secure File Transfer</li>
+                <li>Backup & Ransomware Recovery</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Identity & Access Management (IAM)</strong>
+              <ul>
+                <li>SSO, MFA, RBAC, PAM</li>
+                <li>Identity Governance</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Training & Capacity Building</strong>
+              <ul>
+                <li>Ethical Hacking, Certification Prep</li>
+                <li>Corporate Workshops & Student Programs</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Specialized Services</strong>
+              <ul>
+                <li>Red/Blue Team Exercises</li>
+                <li>Bug Bounty & AI/ML Threat Detection</li>
+                <li>Blockchain & Industrial System Security</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="service-hacking">
+        <h2>Ethical Hacking</h2>
+        <div>
+          <h2>Ethical Hacking Services</h2>
+
+          <ul>
+            <li>
+              <strong>Penetration Testing (Pentesting)</strong>
+              <ul>
+                <li>Network Penetration Testing</li>
+                <li>Web Application Pentesting</li>
+                <li>Mobile App Pentesting</li>
+                <li>Wireless Network Pentesting</li>
+                <li>Cloud Pentesting</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Vulnerability Assessment</strong>
+              <ul>
+                <li>
+                  Scans systems for known vulnerabilities using automated <br />
+                  tools and manual verification.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Social Engineering Testing</strong>
+              <ul>
+                <li>Phishing Simulation</li>
+                <li>Impersonation Attacks</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Red Teaming</strong>
+              <ul>
+                <li>
+                  Simulated real-world attacks mimicking APT over a long period.
+                </li>
+                <li>
+                  Includes physical, digital, and social engineering tactics.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Bug Bounty Management</strong>
+              <ul>
+                <li>
+                  Set up and manage programs that reward <br />
+                  external researchers for finding vulnerabilities.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>IoT Security Testing</strong>
+              <ul>
+                <li>
+                  Assesses vulnerabilities in connected devices <br />
+                  (smart home, Industrial IoT, etc.)
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Code Review (SAST)</strong>
+              <ul>
+                <li>
+                  Reviews source code for security flaws without <br />
+                  executing the code.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Security Audit and Compliance</strong>
+              <ul>
+                <li>
+                  Ensure system meet standards like ISO 27001, <br />
+                  PCI-DSS, HIPAA, GDPR, etc.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Incident Response Simulation</strong>
+              <ul>
+                <li>
+                  Simulates breach scenarios to test how <br />
+                  well your team responds.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="service-analytics">
+        <h2>Data Analytics</h2>
+        <div>
+          <h2>Data Analytics Services</h2>
+          <ul>
+            <li>
+              <strong>Data Visualization</strong>
+              <ul>
+                <li>
+                  We create interactive and intuitive visual dashboards and
+                  reports.
+                </li>
+                <li>
+                  Enables businesses to quickly understand complex data and
+                  identify trends.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Predictive Analytics</strong>
+              <ul>
+                <li>
+                  Utilizes advanced statistical models and machine learning
+                  techniques.
+                </li>
+                <li>
+                  Forecasts future trends and outcomes to support proactive
+                  strategy development.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Big Data Processing</strong>
+              <ul>
+                <li>
+                  Expertise in managing and analyzing vast and varied datasets.
+                </li>
+                <li>
+                  Helps businesses harness the full potential of their data
+                  assets.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Data Integration</strong>
+              <ul>
+                <li>
+                  Consolidates data from multiple sources into a unified
+                  platform.
+                </li>
+                <li>
+                  Provides a holistic view essential for accurate analysis.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Real-Time Reporting</strong>
+              <ul>
+                <li>
+                  Delivers up-to-date insights through dynamic reports and live
+                  dashboards.
+                </li>
+                <li>
+                  Enables timely decision-making in fast-paced environments.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Machine Learning Model Development</strong>
+              <ul>
+                <li>
+                  Designs and implements intelligent algorithms that learn and
+                  adapt.
+                </li>
+                <li>Improves business processes and predictions over time.</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>KPI (Key Performance Indicator) Tracking</strong>
+              <ul>
+                <li>Monitors and analyzes critical business metrics.</li>
+                <li>
+                  Ensures alignment with strategic goals and facilitates
+                  continuous improvement.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Tailored Analytics Framework Development</strong>
+              <ul>
+                <li>
+                  Collaborates closely with clients to build customized
+                  analytics solutions.
+                </li>
+                <li>
+                  Aligns solutions with business objectives to foster
+                  data-driven innovation.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="service-support">
+        <h2>IT Support and Maintenance</h2>
+        <div>
+          <h2>IT Support and Maintenance Services</h2>
+
+          <ul>
+            <li>
+              <strong>Remote and On-site Assistance</strong><br />
+              Quick resolution of technical issues either remotely or at your
+              location.
+            </li>
+            <li>
+              <strong>Routine System Monitoring</strong><br />
+              Regular checks to ensure systems are running smoothly.
+            </li>
+            <li>
+              <strong>Software Updates</strong><br />
+              Keeping software up-to-date for optimal performance and security.
+            </li>
+            <li>
+              <strong>Hardware Troubleshooting</strong><br />
+              Diagnosing and fixing hardware problems.
+            </li>
+            <li>
+              <strong>User Support</strong><br />
+              Helping users with technical issues and questions.
+            </li>
+            <li>
+              <strong>Proactive Maintenance</strong><br />
+              Preventive actions to avoid future disruptions.
+            </li>
+            <li>
+              <strong>24/7 Monitoring</strong><br />
+              Continuous system surveillance to catch problems early.
+            </li>
+            <li>
+              <strong>Enhanced Security Measures</strong><br />
+              Protecting systems against threats and vulnerabilities.
+            </li>
+            <li>
+              <strong>Business Continuity Support</strong><br />
+              Ensuring minimal downtime and operational consistency.
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="service-socialmedia">
+        <h2>Social Media Production</h2>
+        <div>
+          <h2>SOCIAL MEDIA PRODUCTION SERVICES</h2>
+
+          <ul>
+            <li>
+              <strong> Content Creation</strong>
+              <ul>
+                <li>Short-form Videos (Reels, Shorts, TikToks)</li>
+                <li>High-Quality Cinematic Edits</li>
+                <li>Interview-style or “Talking Head” content</li>
+                <li>Podcast Video Recording & Editing</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong> Graphic Design</strong>
+              <ul>
+                <li>Instagram Posts & Carousels</li>
+                <li>YouTube Thumbnails</li>
+                <li>LinkedIn Banners</li>
+                <li>Story Templates (IG, WhatsApp)</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong> Strategy & Branding</strong>
+              <ul>
+                <li>Niche Analysis & Content Calendar</li>
+                <li>Personal Branding Strategy</li>
+                <li>Hashtag & SEO Optimization</li>
+                <li>Viral Content Mapping</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong> Social Media Management</strong>
+              <ul>
+                <li>Profile Optimization (Bio, Highlights, Links)</li>
+                <li>Daily Post Scheduling</li>
+                <li>Community Management (DMs & Comments)</li>
+                <li>Analytics & Growth Reporting</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong> Paid Promotion & Influencer Growth</strong>
+              <ul>
+                <li>Instagram & Facebook Ads</li>
+                <li>YouTube Ad Campaigns</li>
+                <li>Influencer Collab Outreach</li>
+                <li>Audience Growth via Targeted Campaigns</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </template>
+
+      <template id="service-phonesecurity">
+        <h2>Phone Security</h2>
+        <div>
+          <h2>PHONE SECURITY SERVICES</h2>
+          <ul>
+            <li>
+              <strong> Mobile Security Hardening</strong>
+              <ul>
+                <li>Rooting/Jailbreak Detection & Removal</li>
+                <li>Secure OS Configuration (Android / iOS)</li>
+                <li>App Permission Audit & Cleanup</li>
+                <li>
+                  Encrypted Call & Message Setup (e.g., Signal, ProtonMail)
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong> Phone Hacking & Spyware Detection</strong>
+              <ul>
+                <li>Detect & Remove Spyware or Stalkerware</li>
+                <li>Hidden App/Service Scans</li>
+                <li>
+                  Analysis of Unusual Behavior (battery drain, overheating,
+                  etc.)
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong> Data & Privacy Protection</strong>
+              <ul>
+                <li>App Tracking Protection</li>
+                <li>Secure Cloud Backup Setup</li>
+                <li>Biometric Spoofing Defense</li>
+                <li>Social Media Account Lockdown</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong> Anti-Theft & Monitoring Setup</strong>
+              <ul>
+                <li>Remote Device Wipe Systems</li>
+                <li>Emergency Lockdown Protocols</li>
+                <li>Geo-Fencing & Device Movement Alerts</li>
+                <li>IMEI Lock Support (if stolen)</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong> Awareness & Support</strong>
+              <ul>
+                <li>Personal Training on Mobile Safety</li>
+                <li>Kids/Family Phone Security Setup</li>
+                <li>Phishing Awareness & Social Engineering Defense</li>
+                <li>
+                  Secure App Alternatives (for browsing, calling, messaging)
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </template>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h4>About A.S Association</h4>
+          <p>
+            A.S Association is dedicated to helping people stay safe online. We
+            provide free assistance in combating cybercrime, protecting privacy,
+            and restoring digital peace of mind.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: asassociaton@gmail.com</p>
+          <p>Phone: +91 8637043421 / 9547668189 / 9123249116</p>
+          <p>
+            Address: Mahabir Road, Baridih Colony, Jamshedpur, Jharkhand 831017
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2021 A.S Association. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="service.js"></script>
+  </body>
+</html>

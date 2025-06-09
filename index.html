@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AS association</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="A.S-logo.png" alt="logo">
+        <h2>
+          A.S Association <br />
+          <p class="desc">IT Services and IT Consulting</p>
+        </h2>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About us</a></li>
+            <li><a href="Login.html">Sign In</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="About-us">
+        Welcome to <span> A.S Association</span>
+      </section>
+      <section class="description">
+        <h3>
+          FACING ONLINE BLACKMAIL OR FAKE PROFILES? <br />
+          WE ARE HERE TO HELP -FOR FREE! <br />
+        </h3>
+        <p>
+          If someone is blackmailing you, threatening to share your private
+          pictures, or creating fake profiles on Instagram, Facebook, or any
+          other social media platform, don't panic! You are not alone. <br />
+          At AS Association, we specialize in cybersecurity and digital
+          security, and we are committed to helping victims of online harassment
+          at no cost.
+        </p>
+        <h3>WHAT WE DO:</h3>
+        <ul>
+          <li>Remove fake profiles from social media platforms</li>
+          <li>Trace and report cybercriminals</li>
+          <li>Ensure your privacy and security online</li>
+          <li>Provide legal and technical assistance</li>
+        </ul>
+        <p>
+          Your safety is our priority! Contact us immediately, and we will help
+          confidentially and professionally. <br />
+          Helpline Numbers: +918637043421 / 9547668189 / 9123249116 <br />
+          Address: Mahabir Road Baridih.vidyapati nagar, Post baridih, Baridih
+          Colony, Jamshedpur, Jharkhand 831017 <br />
+          Powered by AS Association - Protecting Your Digital Identity
+        </p>
+      </section>
+      <p class="center">
+        <a href="service.html" class="btn blue">Click Here</a>
+      </p>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h4>About A.S Association</h4>
+          <p>
+            A.S Association is dedicated to helping people stay safe online. We
+            provide free assistance in combating cybercrime, protecting privacy,
+            and restoring digital peace of mind.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: asassociaton@gmail.com </p>
+          <p>Phone: +91 8637043421 / 9547668189 / 9123249116</p>
+          <p>
+            Address: Mahabir Road, Baridih Colony, Jamshedpur, Jharkhand 831017
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2021 A.S Association. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".navigation");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        navMenu.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
